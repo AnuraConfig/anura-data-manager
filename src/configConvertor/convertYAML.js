@@ -1,4 +1,4 @@
-import YAML from './node_modules/js-yaml'
+import YAML from 'js-yaml'
 
 
 function isValid(text) {
