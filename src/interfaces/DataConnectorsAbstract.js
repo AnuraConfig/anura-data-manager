@@ -12,7 +12,13 @@ export default class DataConnectorsAbstract {
     async updateService(updatedService, originalName) {
         throw new Error("Not Implement")
     }
+    async deleteService(serviceName) {
+        throw new Error("Not Implement")
+    }
     async updateConfig(serviceName, environmentName, data, type = "TEXT") {
+        throw new Error("Not Implement")
+    }
+    async deleteEnvironment(serviceName, environmentName) {
         throw new Error("Not Implement")
     }
     async getService(serviceName, raw, lastConfig) {
