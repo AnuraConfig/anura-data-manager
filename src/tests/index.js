@@ -1,6 +1,6 @@
 import chai from "chai"
 import _ from "lodash"
-import newService from "..mocks/newService"
+import newService from "./mocks/newService"
 import { newEnvironment } from "./mocks/testObject"
 
 const { expect, should } = chai
@@ -80,5 +80,10 @@ export default function dataManagerRequestTests() {
         copyService.environments.push(newEnvironment)
         this.dataManager.updateService(copyService, newService.name)
         await this.dataManager.getConfig("TestService", "newEnv")
+    })
+    it("should delete the service", async function () {
+        await this.dataManager.deleteService("TestService")
+        const serviceEnv = await this.dataManager.getAllEnv()
+        expect(serviceEnv.length).to.equal(0)
     })
 }
