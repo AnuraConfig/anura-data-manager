@@ -1,6 +1,3 @@
-
-
-
 export default class DataConnectorsAbstract {
     constructor(log, stateManager) {
         this.log = log
