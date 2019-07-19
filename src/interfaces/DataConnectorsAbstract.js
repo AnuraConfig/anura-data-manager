@@ -30,5 +30,11 @@ export default class DataConnectorsAbstract {
     async getAllEnv() {
         throw new Error("Not Implement")
     }
+    async getGlobalVariable() {
+        throw new Error("Not Implement")
+    }
+    async saveGlobalVariable(globalConfig) {
+        throw new Error("Not Implement")
+    }
 
 }
