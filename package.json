@@ -4,7 +4,8 @@
   "description": "the interface package for all of anura data-manager plugins",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src/ --watch --out-dir lib/",
+    "build": "babel src/ --out-dir lib/",
+    "start": "babel src/ --watch --out-dir lib/",
     "test": "mocha --require babel-register --require babel-polyfill --recursive ./test --exit  "
   },
   "repository": {
