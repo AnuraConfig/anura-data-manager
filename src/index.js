@@ -5,12 +5,12 @@ import commonTest from './tests'
 import * as validation from './validation'
 import * as  interfaces from './interfaces'
 
-const defaultParse = [
+export const defaultParse = [
   {
     key: "data",
     name: "parameter inject",
     condition: true,
-    parse: ParamterInject
+    parse: paramterInject
   },
   {
     key: "data",
