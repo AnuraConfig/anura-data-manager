@@ -86,4 +86,16 @@ export default function dataManagerRequestTests() {
         const serviceEnv = await this.dataManager.getAllEnv()
         expect(serviceEnv.length).to.equal(0)
     })
+    it("should write and get Global Variables", async function () {
+        const globalVariable = { url: "http://testUrl" }
+        await this.dataManager.saveGlobalVariable(globalVariable)
+        const res = await this.dataManager.getGlobalVariable()
+        expect(res).to.deep.equal(globalVariable)
+    })
+    it("should update global Variables state ", async function () { // this test is optional 
+        const globalVariable = { url: "http://testUrl" }
+        await this.dataManager.saveGlobalVariable(globalVariable)
+        const res = this.dataManager.globalVariables
+        expect(res).to.deep.equal(globalVariable)
+    })
 }
