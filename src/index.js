@@ -5,7 +5,7 @@ import commonTest from './tests'
 import * as validation from './validation'
 import * as  interfaces from './interfaces'
 
-export const defaultParse = [
+const defaultParse = [
   {
     key: "data",
     name: "parameter inject",
@@ -19,6 +19,5 @@ export const defaultParse = [
     parse: (config, options) => configConvertor.getObject(config.data, config.type)
   },
 ]
-const generateBasicParser = (customParsers) => new ConfigParser([...defaultParse, ...customParsers])
 
-export { validation, commonTest, configConvertor, interfaces, ConfigParser, generateBasicParser }
+export { validation, commonTest, configConvertor, interfaces, ConfigParser, defaultParse }
