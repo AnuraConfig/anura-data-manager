@@ -36,7 +36,7 @@ describe('ConfigParser', function () {
         "url": "http://someUrl"
       }
       const parseConfig = this.newConfig.parseConfig(config, { globalVariables })
-      console.log(parseConfig)
+      expect(parseConfig).to.deep.equal({ data: { serviceUrl: 'http://someUrl' }, type: 'JSON' })
     })
   })
 })
