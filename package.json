@@ -4,7 +4,8 @@
   "description": "the interface package for all of anura data-manager plugins",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src/ --watch --out-dir lib/",
+    "build": "babel src/ --out-dir lib/",
+    "start": "babel src/ --watch --out-dir lib/",
     "test": "mocha --require babel-register --require babel-polyfill --recursive ./test --exit  "
   },
   "repository": {
@@ -17,7 +18,7 @@
     "url": "https://github.com/AnuraConfig/anura-data-manager/issues"
   },
   "homepage": "https://github.com/AnuraConfig/anura-data-manager#readme",
-  "dependencies": {
+  "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",

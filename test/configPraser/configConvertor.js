@@ -1,9 +1,9 @@
 import assert from "assert"
 import chai from "chai"
-import convertConfig from "../../src/configConvertor"
-import convertJSON from "../../src/configConvertor/convertJSON"
-import convertText from "../../src/configConvertor/convertText"
-import convertYAML from "../../src/configConvertor/convertYAML"
+import convertConfig from "../../src/configParser/configConvertor"
+import convertJSON from "../../src/configParser/configConvertor/convertJSON"
+import convertText from "../../src/configParser/configConvertor/convertText"
+import convertYAML from "../../src/configParser/configConvertor/convertYAML"
 
 const expect = chai.expect
 

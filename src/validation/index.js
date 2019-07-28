@@ -1,4 +1,4 @@
-import configConvertor from '../configConvertor'
+import configConvertor from '../configParser/configConvertor'
 
 export function validConfigType(data, type, logger) {
     if (!configConvertor.typeDic[type]) logAndThrow(`no such type:  ${type}`, logger)
