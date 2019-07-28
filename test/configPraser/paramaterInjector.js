@@ -1,8 +1,6 @@
 import assert from "assert"
-import chai from "chai"
-import ParamterInject from "../../src/configParser/paramaterInjector"
+import ParamterInject from "../../src/configParser/paramterInjector"
 
-const expect = chai.expect
 
 describe('ParamterInject', () => {
     describe('#ParamterInject()', () => {
@@ -13,8 +11,7 @@ describe('ParamterInject', () => {
             const config = {
                 data: "{\"serviceUrl\":\"@url\"}"
             }
-            const res = ParamterInject(config, { globalVariables, paramKey: "@" })
-            
+            const res = ParamterInject(config, { globalVariables })
             assert.equal(res, "{\"serviceUrl\":\"http://someUrl\"}")
         })
     })
