@@ -1,7 +1,11 @@
+import { ConfigParser, defaultParse } from '../index'
+
+
 export default class DataConnectorsAbstract {
-    constructor(log, stateManager) {
+    constructor(log, stateManager, configParser = new ConfigParser(defaultParse)) {
         this.log = log
         this.stateManager = stateManager
+        this.configParser = configParser
     }
     async createService({ name, description, environments }) {
         throw new Error("Not Implement")
