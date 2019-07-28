@@ -1,6 +1,6 @@
 {
   "name": "anura-data-manager",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "the interface package for all of anura data-manager plugins",
   "main": "lib/index.js",
   "scripts": {
