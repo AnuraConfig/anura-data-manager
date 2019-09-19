@@ -35,5 +35,17 @@ describe('ConfigParser', function () {
       const parseConfig = this.newConfig.parseConfig(config, { globalVariables, isRaw: true })
       expect(parseConfig).to.deep.equal({ data: "{\"serviceUrl\":\"http://someUrl\"}", type: 'JSON' })
     })
+
+    it('should ignore global var', function () {
+      const config = {
+        data: "{\"serviceUrl\":\"@url\"}",
+        type: 'JSON'
+      }
+      const globalVariables = {
+        "url": "http://someUrl"
+      }
+      const parseConfig = this.newConfig.parseConfig(config, { globalVariables, isRaw: true, applyVariable: false })
+      expect(parseConfig).to.deep.equal({ data: "{\"serviceUrl\":\"@url\"}", type: 'JSON' })
+    })
   })
 })
