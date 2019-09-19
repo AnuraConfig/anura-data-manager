@@ -9,7 +9,7 @@ const defaultParse = [
   {
     key: "data",
     name: "parameter inject",
-    condition: true,
+    condition: (config, options) => options.applyVariable !== false,
     parse: paramterInject
   },
   {
